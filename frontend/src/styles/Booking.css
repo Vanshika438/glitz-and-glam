@@ -1,0 +1,112 @@
+.booking-page {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 2.5rem;
+  background: #fff;
+  border-radius: 25px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid #fce4ec;
+}
+
+.booking-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #d4af37;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form button {
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #fdfdfd;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+  border-color: #f48fb1;
+  box-shadow: 0 0 5px rgba(244, 143, 177, 0.3);
+  outline: none;
+}
+
+.booking-form button {
+  background-color: #e91e63;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.booking-form button:hover {
+  background-color: #ad1457;
+}
+
+.insta-dm {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.insta-dm a {
+  color: #c2185b;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px dashed #c2185b;
+  padding-bottom: 2px;
+  transition: color 0.3s ease;
+}
+
+.insta-dm a:hover {
+  color: #880e4f;
+}
+
+/* Tablets and below */
+@media (max-width: 768px) {
+  .booking-page {
+    margin: 30px 15px;
+    padding: 2rem;
+  }
+
+  .booking-title {
+    font-size: 1.7rem;
+  }
+}
+
+/* Phones and very small devices */
+@media (max-width: 480px) {
+  .booking-page {
+    margin: 20px 10px;
+    padding: 1.5rem;
+  }
+
+  .booking-title {
+    font-size: 1.5rem;
+  }
+
+  .booking-form input,
+  .booking-form select,
+  .booking-form button {
+    font-size: 0.95rem;
+    padding: 0.75rem 0.9rem;
+  }
+
+  .insta-dm {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,103 @@
+.our-journey-page {
+    padding: 2rem;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .journey-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .journey-hero p {
+    font-size: 1.2rem;
+    color: #ccc;
+  }
+  
+  .video-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .video-box {
+    position: relative;
+    width: 320px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+  }
+  
+  .video-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    text-align: center;
+  }
+  
+  .video-overlay h2 {
+    display: flex;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 4px #000;
+  }
+  
+  .journey-button {
+    background-color: #e1306c;
+    color: #fff;
+    padding: 0.6rem 1rem;
+    border-radius: 25px;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .journey-button:hover {
+    background-color: #c2185b;
+  }
+  
+  .insta-icon {
+    font-size: 1rem;
+  }
+  .more-videos-title {
+    text-align: center;
+    font-size: 28px;
+    margin: 40px 0 20px;
+    color: #333;
+  }
+  
+  .more-videos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5.5rem;
+    padding: 20px;
+  }

@@ -1,0 +1,101 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500&display=swap');
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+} */
+
+/* Header Styling */
+ h1, h2 {
+  font-family: 'Playfair Display', serif;
+  color: #C9A66B;
+  text-align: center;
+} 
+
+/* Container */
+.container {
+  width: 85%;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  padding: 40px 0;
+}
+
+/* Navbar Styling */
+.navbar {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px 0;
+  text-align: center;
+  border-bottom: 2px solid #C9A66B;
+}
+
+.navbar a {
+  color: #C9A66B;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffffff;
+} 
+
+/* Button Styling */
+button {
+  background: linear-gradient(45deg, #C9A66B, #b08a5a);
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #e1b778;
+  transform: scale(1.05);
+} 
+
+/* Testimonial Card */
+ .testimonial-card {
+  background: #1A1A1A;
+  border: 2px solid #C9A66B;
+  padding: 20px;
+  margin: 10px auto;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+} 
+
+/* Footer */
+.footer {
+  background: #111;
+  color: #C9A66B;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  border-top: 2px solid #C9A66B;
+}
+
+.footer a {
+  color: #C9A66B;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer a:hover {
+  color: white;
+}
