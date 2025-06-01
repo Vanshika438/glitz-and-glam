@@ -32,7 +32,7 @@ const Booking = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/api/booking", form);
+      const res = await axios.post("http://localhost:5000/api/bookings", form);
       alert(res.data.message || "Booking successful!");
       setForm({ name: "", email: "", phone: "", date: "", service: "" });
     } catch (err) {
