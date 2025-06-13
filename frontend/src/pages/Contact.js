@@ -5,7 +5,6 @@ import axios from "axios";
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [useBackend] = useState(false); // Toggle to true when backend is ready
-  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -36,7 +35,6 @@ const Contact = () => {
           body: JSON.stringify(form),
         });
         if (res.ok) {
-          setSubmitted(true);
           alert("Message sent successfully via Formspree!");
         } else {
           alert("Formspree submission failed.");
