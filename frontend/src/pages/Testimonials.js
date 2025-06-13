@@ -3,7 +3,7 @@ import "../styles/Testimonials.css";
 
 const testimonials = [
   {
-    name: "Charmi Jain ✨",
+    name: "Charmi Jain , Indore",
     quote: `Firstly, a big big thank you for making me feel like the most beautiful version of myself on all my wedding functions! 💫
 
 Each and every makeup look was honestly so on point – from the subtle glam to the full bridal look, everything was exactly how I had imagined (maybe even better 😍). You really understood my vibe and made sure I was comfortable throughout.
