@@ -36,11 +36,9 @@ const Contact = () => {
 
       {/* Contact Info */}
       <div className="contact-info">
-        <p><strong>📞 Phone:</strong> +91 98765 43210</p>
-        <p><strong>📧 Email:</strong> glitzandglam@example.com</p>
+        <p><strong>📞 Phone:</strong> +91 9131489879</p>
         <div className="socials">
           <a href="https://www.instagram.com/glitzandglam_by_archi" target="_blank" rel="noreferrer">Instagram</a>
-          <a href="https://facebook.com" target="_blank" rel="noreferrer">Facebook</a>
         </div>
       </div>
 

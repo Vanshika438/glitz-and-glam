@@ -6,14 +6,12 @@ import videoFile from "../assets/services/All.mp4";
 import Side1 from "../assets/services/Side1.mp4";
 import Side2 from "../assets/services/Side2.mp4";
 
-// Add more videos below
 import Extra1 from "../assets/services/Extra1.mp4";
 import Extra2 from "../assets/services/Extra2.mp4";
 import Extra3 from "../assets/services/Extra3.mp4";
-// import Extra4 from "../assets/services/Extra4.mp4";
 
 const OurJourney = () => {
-  const extraVideos = [Extra1, Extra2, Extra3]; // Add more here as needed
+  const extraVideos = [Extra1, Extra2, Extra3]; 
 
   return (
     <div className="our-journey-page">
@@ -55,9 +53,6 @@ const OurJourney = () => {
         ))}
       </div>
       </div>
-      
-      {/* 👇 More Videos Below
-      <h2 className="more-videos-title">Glam Moments 💖</h2> */}
       
     </div>
   );
