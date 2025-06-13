@@ -122,7 +122,7 @@ const Services = () => {
         </div>
 
         {/* CTA */}
-        <a href="/services#teaching" className="btn-learn">
+        <a href="/booking" className="btn-learn">
           Join a Class
         </a>
       </div>

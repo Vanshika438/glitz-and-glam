@@ -11,6 +11,8 @@ const Booking = () => {
     service: "",
   });
 
+  const [useBackend] = useState(false); // Switch to true when backend is ready
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -18,13 +20,11 @@ const Booking = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validation: Either phone or email must be filled
     if (!form.email.trim() && !form.phone.trim()) {
       alert("Please provide either your email or phone number.");
       return;
     }
 
-    // If phone is filled, validate it
     const phoneRegex = /^[6-9]\d{9}$/;
     if (form.phone && !phoneRegex.test(form.phone)) {
       alert("Please enter a valid phone number.");
@@ -32,8 +32,21 @@ const Booking = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/api/bookings", form);
-      alert(res.data.message || "Booking successful!");
+      if (useBackend) {
+        const res = await axios.post("http://localhost:5000/api/bookings", form);
+        alert(res.data.message || "Booking successful!");
+      } else {
+        const res = await fetch("https://formspree.io/f/xkgbryyz", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(form),
+        });
+        if (res.ok) {
+          alert("Booking submitted via Formspree!");
+        } else {
+          alert("Booking failed via Formspree.");
+        }
+      }
       setForm({ name: "", email: "", phone: "", date: "", service: "" });
     } catch (err) {
       console.error(err);
@@ -45,42 +58,13 @@ const Booking = () => {
     <div className="booking-page">
       <h2 className="booking-title">Book Your Glam Session</h2>
       <form className="booking-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          value={form.name}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          value={form.email}
-          onChange={handleChange}
-        />
-        <input
-          type="tel"
-          name="phone"
-          placeholder="Your Phone Number"
-          value={form.phone}
-          onChange={handleChange}
-        />
-        <input
-          type="date"
-          name="date"
-          value={form.date}
-          onChange={handleChange}
-          required
-        />
-        <select
-          name="service"
-          value={form.service}
-          onChange={handleChange}
-          required
-        >
+        <input type="text" name="name" placeholder="Your Name" value={form.name} onChange={handleChange} required />
+        <input type="email" name="email" placeholder="Your Email" value={form.email} onChange={handleChange} />
+        <input type="tel" name="phone" placeholder="Your Phone Number" value={form.phone} onChange={handleChange} />
+        <input type="date" name="date" value={form.date} onChange={handleChange} required />
+        <select name="service" value={form.service} onChange={handleChange} required>
           <option value="" disabled>Select a Service</option>
+          <option value="Student">Student</option>
           <option value="Bridal Makeup">Bridal Makeup</option>
           <option value="Party Glam">Party Glam</option>
           <option value="Haldi Look">Haldi Look</option>
@@ -95,11 +79,7 @@ const Booking = () => {
       <div className="insta-dm">
         <p>
           💌 For any query, DM me on{" "}
-          <a
-            href="https://www.instagram.com/glitzandglam_by_archi"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://www.instagram.com/glitzandglam_by_archi" target="_blank" rel="noreferrer">
             Instagram
           </a>
         </p>
