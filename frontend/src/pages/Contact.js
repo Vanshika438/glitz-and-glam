@@ -8,18 +8,23 @@ const Contact = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     const phoneRegex = /^[6-9]\d{9}$/;
-  
+
     // Check: at least one of email or phone must be provided
     if (!form.email.trim() && !form.phone.trim()) {
       alert("Please provide either your email address or phone number.");
       return;
     }
-  
-    // If phone is filled, validate it
+
+    // ✅ Validate phone if it's filled
+    if (form.phone.trim() && !phoneRegex.test(form.phone)) {
+      alert("Please enter a valid Indian phone number.");
+      return;
+    }
+
     try {
       const res = await axios.post("http://localhost:5000/api/contacts/submit", form);
       alert(res.data.message);

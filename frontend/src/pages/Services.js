@@ -28,10 +28,7 @@ import Outfit1 from "../assets/services/Outfit1.jpeg";
 import Outfit2 from "../assets/services/Outfit2.jpeg";
 import Outfit3 from "../assets/services/Outfit3.jpeg";
 import Outfit4 from "../assets/services/Outfit4.jpeg";
-import Outfitvid1 from "../assets/services/Outfit1.mp4";
-import Outfitvid2 from "../assets/services/Outfit2.mp4";
-import Outfitvid3 from "../assets/services/Outfit3.mp4";
-import Outfitvid4 from "../assets/services/Outfit4.mp4";
+
 const services = [
   { title: "Sangeet Look", image: sangeetImg, video: sangeetVid },
   { title: "Mehndi Look", image: mehndiImg, video: mehndiVid },
