@@ -35,9 +35,9 @@ const Contact = () => {
           body: JSON.stringify(form),
         });
         if (res.ok) {
-          alert("Message sent successfully via Formspree!");
+          alert("Thanks! for reaching out");
         } else {
-          alert("Formspree submission failed.");
+          alert("Something went wrong try again");
         }
       }
       setForm({ name: "", email: "", phone: "", message: "" });

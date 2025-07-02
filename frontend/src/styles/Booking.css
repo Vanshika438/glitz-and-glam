@@ -76,6 +76,37 @@
   color: #880e4f;
 }
 
+.custom-datepicker {
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #fdfdfd;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.custom-datepicker:focus {
+  border-color: #f48fb1;
+  box-shadow: 0 0 5px rgba(244, 143, 177, 0.3);
+  outline: none;
+}
+
+.booking-success {
+  color: green;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.booking-error {
+  color: red;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
 /* Tablets and below */
 @media (max-width: 768px) {
   .booking-page {

@@ -111,7 +111,7 @@ const Services = () => {
         <div className="session-video-gallery">
           {[
             { video: Session1, title: "Bridal Masterclass" },
-            { video: Session2, title: "Haldi Look Demo" },
+            { video: Session2, title: "Portfolio Day" },
             { video: Session3, title: "Mehndi Session" }
           ].map((item, idx) => (
             <div className="session-card" key={idx}>

@@ -55,9 +55,9 @@ const HomePage = () => {
       <section className="testimonials-preview">
         <h2>What Clients Say</h2>
         <div className="testimonial-cards">
-          <blockquote>“Absolutely stunning work! Felt like a queen.”</blockquote>
-          <blockquote>“Punctual, professional, and amazing talent.”</blockquote>
-          <blockquote>“Will 100% book again for my next event!”</blockquote>
+          <blockquote>“Thank you❤ Archi, for your incredible support and amazing makeup skills. You are not just a great makeup artist but also a very supportive person in every situation. You made all my days so special and gave me so much confidence. I'm truly grateful for everything! 🙏”</blockquote>
+          <blockquote>“I just wanted to thank you so much for the amazing hair and make up you did for me.💕🥰 Thank you so much for beautiful makeup❤😍”</blockquote>
+          <blockquote>“Bhot sundar makeup tha di – jaisa mujhe chahiye tha, usse bhi bhot achha tha🤗 Mujhe aur sabko bhot pasand aaya ❣❣ Thank you so much di ❤✨”</blockquote>
         </div>
       </section>
 
