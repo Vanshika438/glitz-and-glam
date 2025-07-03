@@ -1,4 +1,6 @@
 import React from "react";
+
+import {Link} from "react-router-dom";
 import "../styles/Services.css";
 import Session1 from "../assets/services/Session1.mp4";
 import Session2 from "../assets/services/Session2.mp4";
@@ -84,7 +86,7 @@ const Services = () => {
         </div>
 
         <div className="outfit-buttons">
-          <a href="/booking" className="btn-rent">Book now</a>
+          <Link to="/booking" className="btn-rent">Book now</Link>
           <a
             href="https://www.instagram.com/glitzandglam_by_archi"
             target="_blank"

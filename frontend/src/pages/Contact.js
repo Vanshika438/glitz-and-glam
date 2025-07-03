@@ -4,7 +4,7 @@ import axios from "axios";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
-  const [useBackend] = useState(false); // Toggle to true when backend is ready
+  const [useBackend] = useState(true); 
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -26,7 +26,7 @@ const Contact = () => {
 
     try {
       if (useBackend) {
-        const res = await axios.post("http://localhost:5000/api/contacts/submit", form);
+        const res = await axios.post("https://glitz-and-glam-backend.onrender.com/api/contacts/submit", form);
         alert(res.data.message);
       } else {
         const res = await fetch("https://formspree.io/f/xpwrdbbr", {

@@ -17,7 +17,7 @@ const Booking = () => {
   const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
-  const [useBackend] = useState(false); // switch to true when backend is ready
+  const [useBackend] = useState(true);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -59,7 +59,7 @@ const Booking = () => {
 
     try {
       if (useBackend) {
-        const res = await axios.post("http://localhost:5000/api/bookings", payload);
+        const res = await axios.post("https://glitz-and-glam-backend.onrender.com/api/bookings", payload);
         setMessage(res.data.message || "Booking successful!");
       } else {
         const res = await fetch("https://formspree.io/f/xkgbryyz", {
