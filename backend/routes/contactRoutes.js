@@ -6,7 +6,7 @@ const router = express.Router();
 // Submit a contact form
 router.post("/submit", async (req, res) => {
   const { name, email, phone, message } = req.body;
-  console.log("Received contact form data:", req.body); // 🔍 Debug log
+  console.log("Received contact form data:", req.body); 
 
   if (!email && !phone) {
     return res.status(400).json({ error: 'Email or phone is required.' });
@@ -17,7 +17,7 @@ router.post("/submit", async (req, res) => {
     await newContact.save();
     res.status(201).json({ message: 'Contact submitted successfully.' });
   } catch (error) {
-    console.error("Error saving contact:", error); // 🔍 Log exact error
+    console.error("Error saving contact:", error); 
     res.status(500).json({ error: 'Server error. Please try again later.' });
   }
 });
